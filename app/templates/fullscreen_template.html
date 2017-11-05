@@ -25,8 +25,8 @@
     <div class="fullscreen-titlebar js-stick-at-top-when-scrolling">
       {% block fullscreen_title %}{% endblock %}
     </div>
-    <div class="fullscreen-container">
-    {% block fullscreen_content %}{% endblock %}
+    <div class="fullscreen-container" data-module='fullscreen-table'>
+      {% block fullscreen_content %}{% endblock %}
     </div>
   </main>
 {% endblock %}

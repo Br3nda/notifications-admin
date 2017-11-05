@@ -31,10 +31,11 @@ body.with-fullscreen {
     overflow-x: scroll;
     overflow-y: hidden;
     box-sizing: border-box;
+    position: relative;
 
     td,
     th {
-      min-width: 20em;
+      //min-width: 20em;
       padding-left: $gutter-half;
     }
 
@@ -43,6 +44,13 @@ body.with-fullscreen {
       position: sticky;
       left: 0;
     }
+  }
+
+  &-shim {
+    width: 100%;
+    position: absolute;
+    z-index: 9;
+    background: #ffffff;
   }
 
   &-titlebar {
