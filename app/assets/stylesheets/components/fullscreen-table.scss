@@ -24,7 +24,7 @@ body.with-fullscreen {
     margin-top: -$gutter-half;
   }
 
-  &-container {
+  &-content {
     width: 100%;
     background: $white;
     z-index: 10;
@@ -36,7 +36,6 @@ body.with-fullscreen {
     td,
     th {
       //min-width: 20em;
-      padding-left: $gutter-half;
     }
 
     .banner-dangerous {
@@ -50,10 +49,10 @@ body.with-fullscreen {
     width: 100%;
     position: absolute;
     z-index: 9;
-    background: #ffffff;
+    background: $white;
   }
 
-  &-titlebar {
+  &-sticky-bar {
     z-index: 20;
     padding-right: 0;
 
