@@ -1,19 +1,35 @@
 body.with-fullscreen {
-  overflow: hidden;
+
+  #global-header,
+  #global-header-bar {
+    display: none;
+  }
+
+  #footer {
+    height: 0;
+    overflow: hidden;
+  }
+
+  .shim {
+    margin-bottom: 5px;
+  }
+
 }
 
 
 .fullscreen {
 
+  &-header {
+    padding: $gutter-half $gutter-half 0 $gutter-half;
+    margin-top: -$gutter-half;
+  }
+
   &-container {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
     background: $white;
     z-index: 10;
-    overflow: scroll;
+    overflow-x: scroll;
+    overflow-y: hidden;
     box-sizing: border-box;
 
     td,
@@ -30,25 +46,17 @@ body.with-fullscreen {
   }
 
   &-titlebar {
-    color: $white;
-    padding: 0 $gutter-half ;
-    background: white;
-    position: sticky;
-    top: 0;
-    left: 0;
-    width: 100%;
     z-index: 20;
-    box-sizing: border-box;
-    border-bottom: 1px solid $border-colour;
+    padding-right: 0;
 
     .page-footer-back-link {
       position: absolute;
       right: $gutter-half;
-      top: $gutter-half;
+      top: 20px;
     }
 
     .file-upload-button {
-      top: 5px;
+      margin: 0 0 0 $gutter-half;
     }
   }
 

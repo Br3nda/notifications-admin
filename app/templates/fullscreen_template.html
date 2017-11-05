@@ -15,12 +15,18 @@
 {% block footer_support_links %}
 {% endblock %}
 
+{% set omit_header = True %}
+
 {% block content %}
-  <main role="main" class="fullscreen-container">
-    {% block fullscreen_pre_title %}{% endblock %}
+  <main role="main">
+    <div class="fullscreen-header">
+      {% block fullscreen_pre_title %}{% endblock %}
+    </div>
     <div class="fullscreen-titlebar js-stick-at-top-when-scrolling">
       {% block fullscreen_title %}{% endblock %}
     </div>
+    <div class="fullscreen-container">
     {% block fullscreen_content %}{% endblock %}
+    </div>
   </main>
 {% endblock %}
