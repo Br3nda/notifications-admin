@@ -92,7 +92,7 @@ def get_example_letter_address(key):
 @main.route("/fullscreen")
 def fullscreen_row_errors():
     recipients = RecipientCSV("""
-        phone_number,the quick,brown fox jumped, over the lazy dog,
+        phone_number,the quick,brown fox jumped, over the lazy dog,first name, last name, POSTCODE
         07700,foo, bar, baz
         07700,foo, bar, baz
         07700,foo, bar, baz
@@ -105,8 +105,21 @@ def fullscreen_row_errors():
         07700,foo, bar, baz
         07700900123,foo, bar, baz
         07700900123,, bar, baz
+        07700900123,foo, bar, baz
+        07700900123,foo, bar, baz
         07700900123,foo, bar, baz
         07700,, bar, baz
+        07700,foo, bar, baz
+        07700,foo, bar, baz
+        07700,foo, bar, baz
+        07700900123,, bar, baz
+        07700900123,foo, bar, baz
+        07700900123,foo, bar, baz
+        07700900123,foo, bar, baz
+        07700900123,foo, bar, baz
+        07700900123,foo, bar, baz
+        07700900123,foo, bar, baz
+        07700,foo, bar, baz
     """, template_type='sms', placeholders={'the quick'})
     return render_template(
         'views/check/row-errors.html',
