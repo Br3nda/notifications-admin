@@ -32,10 +32,11 @@ body.with-fullscreen {
     overflow-y: hidden;
     box-sizing: border-box;
     position: relative;
+    padding-left: $gutter-half;
 
     td,
     th {
-      //min-width: 20em;
+      min-width: 20em;
     }
 
     .banner-dangerous {
