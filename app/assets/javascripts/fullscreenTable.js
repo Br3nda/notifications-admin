@@ -10,6 +10,7 @@
       this.topOffset = this.$component.offset().top;
 
       this.insertShim();
+      this.maintainHeight();
 
       $(window).on('scroll resize', this.maintainHeight);
 
@@ -22,13 +23,13 @@
       })
     );
 
-    this.maintainHeight = () => this.$component.css(
-      'max-height',
-      Math.min(
+    this.maintainHeight = () => this.$component.css({
+      'max-height': Math.min(
         $(window).height() - this.topOffset + $('html, body').scrollTop(),
         this.nativeHeight
-      )
-    );
+      ),
+      'min-height': $(window).height() - this.topOffset
+    });
 
   };
 
